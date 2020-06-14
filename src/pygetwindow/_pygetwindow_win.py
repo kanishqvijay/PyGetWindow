@@ -215,6 +215,14 @@ class Win32Window(BaseWindow):
             _raiseWithLastError()
 
 
+            
+    def hWnd(self):
+        ''' This method would return hWnd(it in int type) of a window. This helps to apply win32 methods
+        to that window.which gives much more actions on a window '''
+        
+        retuen self._hWnd
+        
+        
     def minimize(self):
         """Minimizes this window."""
         ctypes.windll.user32.ShowWindow(self._hWnd, SW_MINIMIZE)
